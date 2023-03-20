@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { Bai17CustomerComponent } from './bai17-customer/bai17-customer.componen
 import { Bai18ListCustomerComponent } from './bai18-list-customer/bai18-list-customer.component';
 import { Bai22RegisterFormComponent } from './bai22-register-form/bai22-register-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Bai23MathComponent } from './bai23-math/bai23-math.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     Bai16ProductHttpErrorComponent,
     Bai17CustomerComponent,
     Bai18ListCustomerComponent,
-    Bai22RegisterFormComponent
+    Bai22RegisterFormComponent,
+    Bai23MathComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatRadioModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

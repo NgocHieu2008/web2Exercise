@@ -1,9 +1,35 @@
 <h1>Register Course</h1>
 <form [formGroup]="regForm">
-  <div class="container">
-    <mat-form-field appearance="fill">
-      <label for="name">Enter your name</label>
-      <input id="name" name="name" matInput placeholder="Tran Van A" formControlName="name" required>
-    </mat-form-field>
+  <div class="fill">
+    <label for="name">Enter your name</label>
+    <input type="text" name="name" id="name" formControlName="name" required [class.is-invalid]="regForm.controls.name.invalid && regForm.controls.name.touched">
+    <div *ngIf="regForm.controls.name.invalid && regForm.controls.name.touched">
+      <small class="text-danger" *ngIf="regForm.controls.name.errors?.['required']">Ten khong duoc de trong</small>
+    </div>
+  </div>
+  <div class="fill">
+    <label for="email">Enter your email</label>
+    <input type="email" name="email" id="email" formControlName="email">
+  </div>
+  <div class="fill">
+    <label for="phone">Enter your phone</label>
+    <input type="text" name="phone" id="phone" formControlName="phone">
+  </div>
+  <div class="fill">
+    <label for="course">Choose course</label>
+    <select name="course" id="course" formControlName="course">
+      <option value="web01">Web 01</option>
+      <option value="web02">Web 02</option>
+    </select>
+  </div>
+  <div class="fill">
+    <label>Class: </label>
+      <mat-radio-group formControlName="class">
+        <mat-radio-button value="morning">morning</mat-radio-button>
+        <mat-radio-button value="evening">evening</mat-radio-button>
+      </mat-radio-group>
+  </div>
+  <div>
+    <mat-checkbox formControlName="agree">Agree with rules</mat-checkbox>
   </div>
 </form>
