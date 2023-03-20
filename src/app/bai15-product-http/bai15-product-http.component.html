@@ -1,0 +1,17 @@
+<p>bai15-product-http works!</p>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Image</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.ProductId}}</td>
+      <td>{{product.ProductName}}</td>
+      <td>{{product.Price}}</td>
+      <td><img [src]="product.Image" width="100px" height="100px"></td>
+    </tr>
+  </tbody>
+</table>

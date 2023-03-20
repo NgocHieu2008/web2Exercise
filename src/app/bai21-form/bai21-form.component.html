@@ -1,0 +1,34 @@
+<p>bai21-form works!</p>
+
+<h1 class="title">Đăng nhập hệ thống Teacher</h1>
+<div class="container">
+  <div class="left">
+    <img src="./assets/Logo_FIS.png" alt="" width="100px" height="100px">
+  </div>
+  <div class="right">
+    <form #loginForm = "ngForm">
+      <div class="input">
+        <label for="email">Email: </label>
+        <input type="text" #email="ngModel" class="form-control" name="email" id="email" placeholder="example@gmail.com" [(ngModel)] = "teacherModel.email" required [class.is-invalid]="email.invalid && email.touched" [email]="true">
+        <div *ngIf="email.errors && (email.invalid || email.touched)">
+          <small class="text-danger" *ngIf = "email.errors['required']" class="text-danger">Ban chua nhap email</small>
+          <small class="text-danger"  *ngIf = "email.errors['email']">Email khong hop le</small>
+        </div>
+      </div>
+      <div class="input">
+        <label for="password">Password: </label>
+        <input #password = "ngModel" type="text" class="form-control" name="password" id="password" placeholder="password" [(ngModel)] = "teacherModel.password" minlength="6" required [class.is-invalid]="password.valid || password.untouched">
+        <div *ngIf = "password.errors && (password.invalid || password.touched)">
+          <small class="text-danger" *ngIf = "password.errors['required']">Ban chua nhap password</small>
+          <small class="text-danger" *ngIf = "password.errors['minlength']">Password phai co it nhat 6 ky tu</small>
+        </div>
+      </div>
+      <input type="checkbox" name="check" id="check">
+      <label for="check">Remember me</label>
+      <!-- if checked => store data -->
+      <button class="btn-sub" type="submit" [disabled]="loginForm.form.invalid" routerLink="home">Login</button>
+    </form>
+    <p style="color:red">{{teacherModel | json}}</p>
+  </div>
+</div>
+<router-outlet></router-outlet>
