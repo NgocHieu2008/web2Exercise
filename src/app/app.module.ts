@@ -18,6 +18,11 @@ import { Bai18ListCustomerComponent } from './bai18-list-customer/bai18-list-cus
 import { Bai22RegisterFormComponent } from './bai22-register-form/bai22-register-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Bai23MathComponent } from './bai23-math/bai23-math.component';
+import { Bai29DongABankComponent } from './bai29-dong-abank/bai29-dong-abank.component';
+import { Bai30ProductAPIComponent } from './bai30-product-api/bai30-product-api.component';
+import { Bai31FakeproductComponent } from './bai31-fakeproduct/bai31-fakeproduct.component';
+import { Bai32BitcoinComponent } from './bai32-bitcoin/bai32-bitcoin.component';
+import { Bai33ApiComponent } from './bai33-api/bai33-api.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,12 @@ import { Bai23MathComponent } from './bai23-math/bai23-math.component';
     Bai17CustomerComponent,
     Bai18ListCustomerComponent,
     Bai22RegisterFormComponent,
-    Bai23MathComponent
+    Bai23MathComponent,
+    Bai29DongABankComponent,
+    Bai30ProductAPIComponent,
+    Bai31FakeproductComponent,
+    Bai32BitcoinComponent,
+    Bai33ApiComponent
   ],
   imports: [
     BrowserModule,

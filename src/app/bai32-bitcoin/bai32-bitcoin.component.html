@@ -1,0 +1,42 @@
+<p>bai32-bitcoin works!</p>
+<h2>Bitcoin Price Index</h2>
+<h3>Time</h3>
+<ul>
+  <li>Updated: {{data.time.updated}}</li>
+  <li>UpdatedISO: {{data.time.updatedISO}}</li>
+  <li>Updateduk: {{data.time.updateduk}}</li>
+</ul>
+<h3>Disclaimer: {{data.disclaimer}}</h3>
+<h3>ChartName: {{data.chartName}}</h3>
+<table border="1">
+  <thead>
+    <th>code</th>
+    <th>symbol</th>
+    <th>rate</th>
+    <th>description</th>
+    <th>rate_float</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{data.bpi.USD.code}}</td>
+      <td>{{data.bpi.USD.symbol}}</td>
+      <td>{{data.bpi.USD.rate}}</td>
+      <td>{{data.bpi.USD.description}}</td>
+      <td>{{data.bpi.USD.rate_float}}</td>
+    </tr>
+    <tr>
+      <td>{{data.bpi.GBP.code}}</td>
+      <td>{{data.bpi.GBP.symbol}}</td>
+      <td>{{data.bpi.GBP.rate}}</td>
+      <td>{{data.bpi.GBP.description}}</td>
+      <td>{{data.bpi.GBP.rate_float}}</td>
+    </tr>
+    <tr>
+      <td>{{data.bpi.EUR.code}}</td>
+      <td>{{data.bpi.EUR.symbol}}</td>
+      <td>{{data.bpi.EUR.rate}}</td>
+      <td>{{data.bpi.EUR.description}}</td>
+      <td>{{data.bpi.EUR.rate_float}}</td>
+    </tr>
+  </tbody>
+</table>

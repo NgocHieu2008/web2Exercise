@@ -1,0 +1,24 @@
+<p>bai33-api works!</p>
+<h3 style="background-color: black; color: #fff; text-align: center; width: 100%;">Count: {{data.count}}</h3>
+<table border="1">
+  <thead>
+    <th>API</th>
+    <th>Description</th>
+    <th>Auth</th>
+    <th>HTTPS</th>
+    <th>Cors</th>
+    <th>Link</th>
+    <th>Category</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let en of data.entries">
+      <td>{{en.API}}</td>
+      <td>{{en.Description}}</td>
+      <td>{{en.Autd}}</td>
+      <td>{{en.HTTPS}}</td>
+      <td>{{en.Cors}}</td>
+      <td>{{en.Link}}</td>
+      <td>{{en.Category}}</td>
+    </tr>
+  </tbody>
+</table>

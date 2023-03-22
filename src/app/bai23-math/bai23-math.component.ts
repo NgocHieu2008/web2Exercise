@@ -7,20 +7,5 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./bai23-math.component.css']
 })
 export class Bai23MathComponent {
-  constructor(private _formBuilder: FormBuilder) {}
-
-  public mathForm = this._formBuilder.group(
-    {
-      a: 0,
-      b: 0,
-      c: 0,
-      result: 0
-    }
-  )
-
-  public max() {
-
-  }
-
 
 }

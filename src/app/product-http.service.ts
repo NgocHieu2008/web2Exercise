@@ -8,7 +8,7 @@ import { IProduct } from './product.model';
 })
 export class ProductHttpService {
 
-  private _url: string="../assets/data/productsXXX.json"
+  private _url: string="../assets/data/products.json"
 
   constructor(private _http: HttpClient) { }
 
